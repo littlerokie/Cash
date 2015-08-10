@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CC5C5B02-66C1-479E-AE42-AD0AD6372F17</string>
+	<key>IDESourceControlProjectName</key>
+	<string>云收银</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>137A1177811791EF1847C7857EDE904CBE455DED</key>
+		<string>https://github.com/littlerokie/Cash.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>云收银.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>137A1177811791EF1847C7857EDE904CBE455DED</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/littlerokie/Cash.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>137A1177811791EF1847C7857EDE904CBE455DED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>137A1177811791EF1847C7857EDE904CBE455DED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cash</string>
+		</dict>
+	</array>
+</dict>
+</plist>

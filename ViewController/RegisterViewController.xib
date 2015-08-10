@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
+            <connections>
+                <outlet property="label" destination="xND-UH-bBy" id="fZB-Eq-74w"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cardinfolink 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0U7-ld-pQt">
+                    <rect key="frame" x="110" y="525" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="qny-wv-qaO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="F88-DY-97l">
+                    <rect key="frame" x="105" y="60" width="110" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="F88-DY-97l" secondAttribute="height" multiplier="11:10" id="nt8-BI-11q"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xND-UH-bBy">
+                    <rect key="frame" x="110" y="170" width="100" height="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="hGP-EF-FxN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.75686274509999996" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="0U7-ld-pQt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="7j4-IQ-0LI"/>
+                <constraint firstItem="xND-UH-bBy" firstAttribute="top" secondItem="F88-DY-97l" secondAttribute="bottom" constant="10" id="7pU-BE-v1V"/>
+                <constraint firstItem="F88-DY-97l" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="Bfi-Kc-Ndf"/>
+                <constraint firstAttribute="trailing" secondItem="0U7-ld-pQt" secondAttribute="trailing" constant="110" id="FHp-4L-p2Z"/>
+                <constraint firstItem="xND-UH-bBy" firstAttribute="centerX" secondItem="F88-DY-97l" secondAttribute="centerX" id="c0k-aX-tKo"/>
+                <constraint firstAttribute="trailing" secondItem="F88-DY-97l" secondAttribute="trailing" constant="105" id="kKs-ti-Kx1"/>
+                <constraint firstItem="F88-DY-97l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="105" id="kcd-cm-4Nc"/>
+                <constraint firstItem="F88-DY-97l" firstAttribute="width" secondItem="xND-UH-bBy" secondAttribute="width" constant="10" id="lV0-Sm-BsJ"/>
+                <constraint firstAttribute="bottom" secondItem="0U7-ld-pQt" secondAttribute="bottom" constant="23" id="oMN-Ic-hFD"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo@3x.png" width="960" height="878"/>
+    </resources>
+</document>

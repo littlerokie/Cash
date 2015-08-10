@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="BillTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wechat.png" translatesAutoresizingMaskIntoConstraints="NO" id="nNj-bu-GAd">
+                        <rect key="frame" x="8" y="10" width="40" height="40"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="预下单支付" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYE-9U-Dto">
+                        <rect key="frame" x="63" y="10" width="80" height="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="交易成功" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtk-OB-0Ws">
+                        <rect key="frame" x="63" y="36" width="60" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥3000.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Auo-Tx-Zhu">
+                        <rect key="frame" x="200" y="8" width="120" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="2EP-eo-BDu"/>
+                            <constraint firstAttribute="height" constant="20" id="uAV-do-Ygl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-Cz-6Ac">
+                        <rect key="frame" x="272" y="34" width="40" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="ETb-Gr-YtK"/>
+                            <constraint firstAttribute="height" constant="20" id="yrL-wN-T0a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="详情">
+                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="detailClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HSo-GK-3XE"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="05-28 20：37：09" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e95-0P-RI0">
+                        <rect key="frame" x="63" y="23" width="136" height="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-hj-DEd">
+                        <rect key="frame" x="58" y="58" width="253" height="1"/>
+                        <color key="backgroundColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="g51-jM-duW"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zae-Cz-6Ac" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="1KD-QU-zFJ"/>
+                    <constraint firstItem="Auo-Tx-Zhu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="CDU-Fe-oue"/>
+                    <constraint firstAttribute="bottom" secondItem="Mc2-hj-DEd" secondAttribute="bottom" id="ED8-6v-lYp"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Zae-Cz-6Ac" secondAttribute="bottom" constant="-3" id="EcA-yc-mSn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Auo-Tx-Zhu" secondAttribute="trailing" constant="-8" id="J7r-Jg-XxO"/>
+                    <constraint firstItem="Mc2-hj-DEd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="58" id="Twh-bq-MDp"/>
+                    <constraint firstAttribute="trailing" secondItem="Mc2-hj-DEd" secondAttribute="trailing" constant="9" id="TyR-tF-Py9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detail" destination="Zae-Cz-6Ac" id="HWZ-sa-tju"/>
+                <outlet property="image" destination="nNj-bu-GAd" id="e7s-hH-tJ0"/>
+                <outlet property="isSuccess" destination="wtk-OB-0Ws" id="oWw-kz-XME"/>
+                <outlet property="money" destination="Auo-Tx-Zhu" id="9Zs-3z-WCS"/>
+                <outlet property="timeLabel" destination="e95-0P-RI0" id="wCJ-SI-Wpo"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="wechat.png" width="143" height="144"/>
+    </resources>
+</document>

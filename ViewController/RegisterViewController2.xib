@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController2">
+            <connections>
+                <outlet property="label1" destination="p2I-Rg-au5" id="bfE-A8-l1D"/>
+                <outlet property="label2" destination="kjx-T2-rhI" id="Azd-cu-iFj"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-da-FVX">
+                    <rect key="frame" x="109" y="40" width="102" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iqE-da-FVX" secondAttribute="height" multiplier="1:1" constant="12" id="09X-f7-J2s"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*云收银将严格遵守国家相关法律法规，承诺不讲您的账户信息以任何形式透露给第三方。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjx-T2-rhI">
+                    <rect key="frame" x="30" y="162" width="260" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="cVR-Ja-izj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*请完善以下信息，才能正常使用收款功能。我们会将您的收款全额在2个工作日内清算到您的账户中。" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2I-Rg-au5">
+                    <rect key="frame" x="30" y="137" width="260" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="8d4-xh-2ze"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cardinfolink 2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HFd-59-Rjb">
+                    <rect key="frame" x="110" y="525" width="100" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="n4L-lF-Qp0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.79633642930000004" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kjx-T2-rhI" secondAttribute="trailing" constant="30" id="8Ce-oQ-eew"/>
+                <constraint firstItem="kjx-T2-rhI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="M3r-tr-G90"/>
+                <constraint firstItem="HFd-59-Rjb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="110" id="ROg-PU-1D8"/>
+                <constraint firstItem="kjx-T2-rhI" firstAttribute="top" secondItem="p2I-Rg-au5" secondAttribute="bottom" constant="-15" id="XEJ-S2-EzR"/>
+                <constraint firstItem="iqE-da-FVX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="109" id="cED-3H-BIl"/>
+                <constraint firstAttribute="trailing" secondItem="HFd-59-Rjb" secondAttribute="trailing" constant="110" id="elw-Q3-bEj"/>
+                <constraint firstItem="iqE-da-FVX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="g2G-kn-w7h"/>
+                <constraint firstAttribute="bottom" secondItem="HFd-59-Rjb" secondAttribute="bottom" constant="23" id="gHD-Kd-xug"/>
+                <constraint firstAttribute="trailing" secondItem="iqE-da-FVX" secondAttribute="trailing" constant="109" id="jA6-sL-YyT"/>
+                <constraint firstAttribute="trailing" secondItem="p2I-Rg-au5" secondAttribute="trailing" constant="30" id="kbW-V7-xtF"/>
+                <constraint firstItem="p2I-Rg-au5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="m0j-9c-niF"/>
+                <constraint firstItem="p2I-Rg-au5" firstAttribute="top" secondItem="iqE-da-FVX" secondAttribute="bottom" constant="7" id="wL9-ZD-vme"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo@3x.png" width="960" height="878"/>
+    </resources>
+</document>

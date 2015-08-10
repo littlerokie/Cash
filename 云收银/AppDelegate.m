@@ -7,6 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "LoginViewController.h"
+#import "BillViewController.h"
+#import "LeftMenuViewController.h"
+#import "SlideNavigationController.h"
+#import "SlideNavigationContorllerAnimatorScaleAndFade.h"
+
 
 @interface AppDelegate ()
 
@@ -16,9 +22,22 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    LoginViewController *login=[[LoginViewController alloc]init];
+    SlideNavigationController *slide=[[SlideNavigationController alloc]initWithRootViewController:login];
+    slide.portraitSlideOffset=self.window.frame.size.width-100;//移动的距离设置
+    [SlideNavigationController sharedInstance].menuRevealAnimator = [[SlideNavigationContorllerAnimatorScaleAndFade alloc] initWithMaximumFadeAlpha:.6 fadeColor:[UIColor blackColor] andMinimumScale:.8];//移动的动画
+    LeftMenuViewController *left=[[LeftMenuViewController alloc]init];
+    [SlideNavigationController sharedInstance].leftMenu=left;
+    [self.window setRootViewController:slide];
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
