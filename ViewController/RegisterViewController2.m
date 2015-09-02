@@ -27,16 +27,12 @@
 {
     [super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
-}
-
--(void)viewDidDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
     [_bank resignFirstResponder];
     [_name resignFirstResponder];
     [_bankID resignFirstResponder];
     [_phoneNum resignFirstResponder];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:193/255.0 blue:217/255.0 alpha:1.0];
@@ -167,6 +163,9 @@
 #pragma mark -下一步
 -(void)next
 {
+//    NSUserDefaults *userdefaults=[NSUserDefaults standardUserDefaults];
+//    NSLog(@"%@",[userdefaults objectForKey:@"email"]);
+//    NSLog(@"%@",[userdefaults objectForKey:@"password"]);
     BillViewController *bill=[[BillViewController alloc]init];
     [[SlideNavigationController sharedInstance] pushViewController:bill animated:YES];
 }

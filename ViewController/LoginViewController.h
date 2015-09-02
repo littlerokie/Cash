@@ -11,10 +11,14 @@
 #import "SlideNavigationController.h"
 @interface LoginViewController : UIViewController
 
+@property(nonatomic,assign)BOOL autoLogin;//1代表自动登入
+
 @property(nonatomic,strong)MyTextField *email;
 
 @property(nonatomic,strong)MyTextField *password;
 
 @property(nonatomic,strong)SlideNavigationController *slide;
+
+@property(nonatomic,strong)NSMutableDictionary *dictionary;//用于读取User.plist中的数据
 
 @end

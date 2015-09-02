@@ -10,7 +10,7 @@
             <connections>
                 <outlet property="check" destination="80S-MG-4Yh" id="ZFs-UM-DmO"/>
                 <outlet property="label" destination="OSh-yQ-xXb" id="gZu-rT-qNR"/>
-                <outlet property="picture" destination="TpR-em-4rz" id="DXb-rT-FE6"/>
+                <outlet property="picture" destination="TpR-em-4rz" id="idt-uc-cc9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="walletLabel" destination="sTL-jl-qen" id="GoA-vJ-Gav"/>
                 <outlet property="wechat" destination="Pzj-DB-EQ8" id="3ZX-pW-o7j"/>
@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TpR-em-4rz">
-                    <rect key="frame" x="60" y="180" width="200" height="200"/>
+                    <rect key="frame" x="40" y="180" width="240" height="240"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="TpR-em-4rz" secondAttribute="height" multiplier="1:1" id="4vx-St-vmW"/>
                     </constraints>
@@ -48,7 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本次收款金额：56.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-yQ-xXb">
-                    <rect key="frame" x="60" y="415" width="200" height="21"/>
+                    <rect key="frame" x="60" y="432" width="200" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="20q-f0-vq3"/>
                         <constraint firstAttribute="height" constant="21" id="uIB-Fn-vPv"/>
@@ -71,7 +71,7 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-pB-LDt">
-                    <rect key="frame" x="140" y="264" width="40" height="40"/>
+                    <rect key="frame" x="140" y="280" width="40" height="40"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="v9u-NX-bWW"/>
@@ -79,7 +79,7 @@
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wechat.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pzj-DB-EQ8">
-                    <rect key="frame" x="143" y="266" width="35" height="35"/>
+                    <rect key="frame" x="143" y="282" width="35" height="35"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="f8y-7M-5r0"/>
                         <constraint firstAttribute="height" constant="35" id="hYn-ql-pRo"/>
@@ -88,7 +88,7 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Pzj-DB-EQ8" firstAttribute="centerY" secondItem="TpR-em-4rz" secondAttribute="centerY" constant="3.5" id="ADe-FM-Qo8"/>
+                <constraint firstItem="Pzj-DB-EQ8" firstAttribute="centerY" secondItem="TpR-em-4rz" secondAttribute="centerY" constant="-0.5" id="ADe-FM-Qo8"/>
                 <constraint firstAttribute="centerX" secondItem="OSh-yQ-xXb" secondAttribute="centerX" id="C2j-ND-0za"/>
                 <constraint firstItem="aV0-3X-6ZY" firstAttribute="top" secondItem="sTL-jl-qen" secondAttribute="bottom" constant="7" id="Ezg-o4-Flb"/>
                 <constraint firstItem="9QV-pB-LDt" firstAttribute="centerX" secondItem="Pzj-DB-EQ8" secondAttribute="centerX" constant="-0.5" id="PRL-w9-Ziz"/>
@@ -99,11 +99,11 @@
                 <constraint firstItem="TpR-em-4rz" firstAttribute="top" secondItem="aV0-3X-6ZY" secondAttribute="bottom" constant="27" id="ZeC-KO-TYn"/>
                 <constraint firstAttribute="centerX" secondItem="TpR-em-4rz" secondAttribute="centerX" id="aXn-OG-G2x"/>
                 <constraint firstItem="aV0-3X-6ZY" firstAttribute="centerX" secondItem="sTL-jl-qen" secondAttribute="centerX" id="bgX-mb-WH2"/>
-                <constraint firstItem="TpR-em-4rz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="daj-tD-cNk"/>
+                <constraint firstItem="TpR-em-4rz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="daj-tD-cNk"/>
                 <constraint firstAttribute="centerX" secondItem="sTL-jl-qen" secondAttribute="centerX" id="ey7-qU-Njg"/>
                 <constraint firstItem="sTL-jl-qen" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="106" id="oBc-1u-i0F"/>
                 <constraint firstItem="80S-MG-4Yh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="tca-Cp-Huu"/>
-                <constraint firstItem="OSh-yQ-xXb" firstAttribute="top" secondItem="TpR-em-4rz" secondAttribute="bottom" constant="35" id="vA6-Si-Yez"/>
+                <constraint firstItem="OSh-yQ-xXb" firstAttribute="top" secondItem="TpR-em-4rz" secondAttribute="bottom" constant="12" id="vA6-Si-Yez"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <point key="canvasLocation" x="71" y="159"/>

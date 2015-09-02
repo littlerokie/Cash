@@ -9,6 +9,7 @@
 #import "RegisterViewController.h"
 #import "RegisterViewController2.h"
 #import "MyTextField.h"
+#import "DBManager.h"
 
 @interface RegisterViewController ()<UITextFieldDelegate,UIAlertViewDelegate>
 
@@ -99,9 +100,9 @@
     [self.view addConstraint:[NSLayoutConstraint constraintWithItem:nextStep attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:_email attribute:NSLayoutAttributeHeight multiplier:1 constant:0]];
     
 }
--(void)viewDidDisappear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [_email resignFirstResponder];
     [_password resignFirstResponder];
     [_passwordAgain resignFirstResponder];
@@ -158,6 +159,19 @@
     alert.rightBlock=^(){
         RegisterViewController2 *regist=[[RegisterViewController2 alloc]init];
         [[SlideNavigationController sharedInstance] pushViewController:regist animated:YES];
+        
+//        NSUserDefaults *userdefaults=[NSUserDefaults standardUserDefaults];
+//        [userdefaults setObject:_email.text forKey:@"email"];
+//        [userdefaults setObject:_password.text forKey:@"password"];
+//        [userdefaults synchronize];//同步存储到磁盘中 但不是必须的
+//        
+//        //清楚userdefaults中的数据
+//        NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+//        [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+//        DBObject *object=[[DBObject alloc]init];
+//        object.email=_email.text;
+//        object.passWord=_password.text;
+//        [[DBManager shareManager] insertDataWithModel:object];
     };
 }
 

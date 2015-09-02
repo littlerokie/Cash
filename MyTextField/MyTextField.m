@@ -36,13 +36,13 @@
 //placehold的起始位置
 -(CGRect)textRectForBounds:(CGRect)bounds
 {
-    CGRect inset=CGRectMake(bounds.origin.x+55, bounds.origin.y+3, bounds.size.width-55, bounds.size.height);
+    CGRect inset=CGRectMake(bounds.origin.x+55, bounds.origin.y+2, bounds.size.width-55, bounds.size.height);
     return inset;
 }
 //编辑时的起始位置
 -(CGRect)editingRectForBounds:(CGRect)bounds
 {
-    CGRect inset=CGRectMake(bounds.origin.x+55, bounds.origin.y+3, bounds.size.width-55, bounds.size.height);
+    CGRect inset=CGRectMake(bounds.origin.x+55, bounds.origin.y+2, bounds.size.width-55, bounds.size.height);
     return inset;
 }
 //设置textfield的leftView属性

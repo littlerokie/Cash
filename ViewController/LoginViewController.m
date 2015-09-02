@@ -14,6 +14,10 @@
 
 @interface LoginViewController ()<UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *Auto;
+
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+
 @property (weak, nonatomic) IBOutlet UIButton *isAuto;
 
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
@@ -33,9 +37,9 @@
 }
 
 
--(void)viewDidDisappear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [_email resignFirstResponder];
     [_password resignFirstResponder];
 
@@ -44,15 +48,37 @@
 {
     if(self=[super initWithNibName:@"LoginViewController" bundle:nil])
     {
-
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *path=[paths objectAtIndex:0];
+    NSString *filename=[path stringByAppendingPathComponent:@"User.plist"];
+    _dictionary=[[NSMutableDictionary alloc]initWithContentsOfFile:filename];
+//    NSLog(@"dict %@",_dictionary);
+    
+    if(_dictionary)
+    {
+        _autoLogin=[[_dictionary objectForKey:@"auto"] boolValue];
+    }
+    
+    if (_autoLogin) {
+        self.image.image=[UIImage imageNamed:@"4"];
+    }
+    else{
+        self.image.image=[UIImage imageNamed:@"3"];
+    }
+    
+    if ([[_dictionary objectForKey:@"auto"] isEqualToString:@"1"]&&![[_dictionary objectForKey:@"email"] isEqualToString:@""]) {
+        BillViewController *bill=[[BillViewController alloc]init];
+        [[SlideNavigationController sharedInstance] pushViewController:bill animated:YES];
+    }
+    
     self.view.backgroundColor=[UIColor colorWithRed:0/255.0 green:193/255.0 blue:217/255.0 alpha:1.0];
     [self createTextField];
-    
 }
 #pragma mark- textfield
 -(void)createTextField
@@ -135,8 +161,35 @@
     
     [UIView commitAnimations];
 }
+#pragma mark -自动登入 忘记密码
+- (IBAction)autoLogin:(id)sender {
+    _autoLogin=(_autoLogin+1)%2;
+    if (_autoLogin) {
+        self.image.image=[UIImage imageNamed:@"4"];
+    }
+    else{
+        self.image.image=[UIImage imageNamed:@"3"];
+    }
+}
+- (IBAction)forgetPass:(id)sender {
+    
+}
+
 #pragma mark -登入 注册
 - (IBAction)Login:(id)sender {
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *path=[paths objectAtIndex:0];
+    NSString *filename=[path stringByAppendingPathComponent:@"User.plist"];
+    
+    //创建一个dic，写到plist文件里
+    NSMutableDictionary *dict=[[NSMutableDictionary alloc]init];
+    [dict setObject:_email.text forKey:@"email"];
+    [dict setObject:_password.text forKey:@"password"];
+    [dict setObject:[NSString stringWithFormat:@"%d",_autoLogin] forKey:@"auto"];
+    [dict writeToFile:filename atomically:YES];
+    
+    
+    
     BillViewController *bill=[[BillViewController alloc]init];
     [[SlideNavigationController sharedInstance] pushViewController:bill animated:YES];
 }

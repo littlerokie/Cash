@@ -25,6 +25,15 @@
     
     self.window=[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
+#if 1
+    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
+    NSString *path=[paths objectAtIndex:0];
+    NSString *filename=[path stringByAppendingPathComponent:@"User.plist"];
+    NSLog(@"%@",filename);
+    NSMutableDictionary *dictionary=[[NSMutableDictionary alloc]initWithContentsOfFile:filename];
+//    NSLog(@"app %@",dictionary);
+#endif
+    BillViewController *bill=[[BillViewController alloc]init];
     
     LoginViewController *login=[[LoginViewController alloc]init];
     SlideNavigationController *slide=[[SlideNavigationController alloc]initWithRootViewController:login];
@@ -32,8 +41,12 @@
     [SlideNavigationController sharedInstance].menuRevealAnimator = [[SlideNavigationContorllerAnimatorScaleAndFade alloc] initWithMaximumFadeAlpha:.6 fadeColor:[UIColor blackColor] andMinimumScale:.8];//移动的动画
     LeftMenuViewController *left=[[LeftMenuViewController alloc]init];
     [SlideNavigationController sharedInstance].leftMenu=left;
-    [self.window setRootViewController:slide];
     
+    if([[dictionary objectForKey:@"auto"] boolValue])//自动登入
+    {
+        [[SlideNavigationController sharedInstance] pushViewController:bill animated:NO];
+    }
+    [self.window setRootViewController:slide];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -60,5 +73,4 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 @end

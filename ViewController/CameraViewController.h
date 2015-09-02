@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZBarSDK.h"
+
 @interface CameraViewController : UIViewController
 
-@property(nonatomic,strong) ZBarReaderView *readerView;
 
 @end

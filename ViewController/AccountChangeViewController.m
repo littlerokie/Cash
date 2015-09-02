@@ -22,9 +22,9 @@
 {
     return YES;
 }
--(void)viewDidDisappear:(BOOL)animated
+-(void)viewWillDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
     [_bank resignFirstResponder];
     [_name resignFirstResponder];
     [_bankID resignFirstResponder];
@@ -61,7 +61,7 @@
     }
     else{
         space=20;
-        width=5;
+        width=3.5;
     }
     
     _bank=[[MyTextField alloc]initWithFrame:CGRectMake(0,0, 0, height) withImageName:@"account" withPlaceHolder:@"请输入您的开户银行，精确到支行"];

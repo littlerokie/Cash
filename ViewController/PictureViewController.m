@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _picture.image=[QRCodeGenerator qrImageForString:_string imageSize:_picture.frame.size.width];
+    _picture.image=[QRCodeGenerator qrImageForString:@"http://www.baidu.com" imageSize:_picture.frame.size.width];
     self.title=@"扫码支付";
     UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame=CGRectMake(0, 0, 10, 18);
@@ -49,7 +49,7 @@
     }
     else
     {
-        _walletLabel.text=@"请打开微信钱包";
+        _walletLabel.text=@"请打开微信";
         _wechat.image=[UIImage imageNamed:@"wechat"];
     }
 }

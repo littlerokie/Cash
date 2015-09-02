@@ -17,7 +17,6 @@
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
 
-#import "AFNetWorking.h"
 #import "SlideNavigationController.h"
 #import "DXAlertView.h"
 #import "ZBarSDK.h"

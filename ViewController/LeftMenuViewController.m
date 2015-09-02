@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _array=[NSArray arrayWithObjects:@"扫码支付",@"交易管理",@"密码修改",@"账户修改",@"限额提升",@"安全退出", nil];
+    _array=[NSArray arrayWithObjects:@"扫码支付",@"交易管理",@"密码修改",@"账户修改",@"限额提升",@"网络账单",@"安全退出", nil];
     [self createTableView];
 }
 -(void)createTableView
@@ -90,6 +90,10 @@
             vc=[[LimitMoneyChangeViewController alloc]init];
             break;
         case 5:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"]];
+            return;
+            break;
+        case 6:
             [tableView deselectRowAtIndexPath:[tableView  indexPathForSelectedRow] animated:YES];
             [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
             [_table selectRowAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];

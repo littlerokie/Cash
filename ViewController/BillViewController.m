@@ -186,6 +186,8 @@
     BillDetailViewController *detail=[[BillDetailViewController alloc]init];
     [self.navigationController pushViewController:detail animated:YES];
 }
+#pragma mark-删除cell
+//删除cell
 -(void)slideToDeleteCell:(SlideDeleteCell *)slideDeleteCell
 {
     NSIndexPath *indexPath=[_table indexPathForCell:slideDeleteCell];
